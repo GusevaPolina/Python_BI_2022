@@ -27,7 +27,7 @@ def read_bed6(path):
     return pd.read_csv(path, sep='\t', names=names)
 
 
-bed6 = read_bed6('alignment.bed')
+bed6 = read_bed6('../data/alignment.bed')
 
 # reduce amount of information in the 'attributes' column
 gff['attributes'] = gff['attributes'].apply(lambda x: x.split('Name=')[1].split('_')[0])
@@ -53,7 +53,7 @@ new[(new['start_x'] >= new['start_y']) & (new['end_x'] <= new['end_y'])]
 
 
 ## the second part: matplotlib/seaborn
-de = pd.read_csv('diffexpr_data.tsv.gz', sep='\t')
+de = pd.read_csv('../data/diffexpr_data.tsv.gz', sep='\t')
 
 
 # let's make a new column with labels
