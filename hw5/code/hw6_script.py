@@ -17,7 +17,7 @@ def read_gff(path):
                               "score", "strand", "phase", "attributes"])
 
 
-gff = read_gff('rrna_annotation.gff')
+gff = read_gff('../data/rrna_annotation.gff')
 
 
 # let's read *.bed
